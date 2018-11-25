@@ -7,20 +7,26 @@ import PropTypes from 'prop-types'
 
 import './styling/index.css';
 
+import bgImage from './assets/intelligentDesignBackground.jpg'
+
 class App extends Component {
   static proptypes = {
     test: PropTypes.string
   }
 
+  static mainBgImage = {
+    backgroundImage: `url("${bgImage}")`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+  };
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>
-            Neptune Software
-          </p>
-        </header>
-      </div>
+      <body className="demo-main" data-image="mainBgImage">
+        <div id="wrapper">
+          
+        </div>
+      </body>
     );
   }
 }
