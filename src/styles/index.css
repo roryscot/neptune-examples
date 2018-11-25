@@ -63,8 +63,7 @@ body.is-loading *,body.is-loading *:before,body.is-loading *:after {
 }
 
 body {
-	background: #e5e5e5;
-	background-image: url("/assets/css/images/bg.svg");
+	background-image: url("../assets/images/intelligentDesignBackground.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center center;

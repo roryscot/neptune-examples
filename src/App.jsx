@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 // import logo from './logo.svg';
 // import './App.css';
 
-import './styling/index.css';
+import './styles/index.css';
 
-import bgImage from './assets/intelligentDesignBackground.jpg'
+import bgImage from './assets/images/intelligentDesignBackground.jpg'
 
 class App extends Component {
   static proptypes = {
@@ -22,11 +22,11 @@ class App extends Component {
 
   render() {
     return (
-      <body className="demo-main" data-image="mainBgImage">
+      <div className="demo-main">
         <div id="wrapper">
           
         </div>
-      </body>
+      </div>
     );
   }
 }
