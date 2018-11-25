@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 
 
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+// import './App.css';
+
+import './styling/index.css';
 
 class App extends Component {
   static proptypes = {
