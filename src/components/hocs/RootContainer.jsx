@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import PrivateRoute from './hocs/PrivateRoute';
+import PrivateRoute from './PrivateRoute';
 
 class RootContainerComponent extends Component {
     static propTypes = {

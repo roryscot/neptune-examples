@@ -5,7 +5,7 @@ const Link = ({ active, children, onClick }) => {
   if (active) {
     return <span>{children}</span>
   }
-​
+  
   return (
     <a
       href=""
@@ -18,7 +18,7 @@ const Link = ({ active, children, onClick }) => {
     </a>
   )
 }
-​
+
 Link.propTypes = {
   active: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,

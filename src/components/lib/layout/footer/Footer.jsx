@@ -1,5 +1,5 @@
 import React from 'react';
-import FilterLink from '../containers/FilterLink';
+import FilterLink from '../../common/filterLink/FilterLink';
 import * as todos from 'redux/actions';
 console.warn(todos)
 

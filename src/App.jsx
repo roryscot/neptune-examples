@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 // import './styles/css/theme1.css';
 
 import { AddTodo, VisibleTodoList } from './components/lib/todos'
-import Footer from './components/layout/footer/Footer';
+import Footer from './components/lib/layout/footer/Footer';
 
 
 class App extends Component {
