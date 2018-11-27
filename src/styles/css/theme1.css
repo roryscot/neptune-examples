@@ -1,0 +1,9 @@
+/* #sidebar-background  */
+body:before {
+    background-image: url('../../assets/images/supernova.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+

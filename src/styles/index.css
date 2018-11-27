@@ -63,21 +63,25 @@ body.is-loading *,body.is-loading *:before,body.is-loading *:after {
 }
 
 body {
-	background-image: url("../assets/images/intelligentDesignBackground.jpg");
+	background: url("../assets/images/intelligentDesignBackground.jpg");
+		opacity: 0.8;
+	z-index: -10;
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center center;
-	min-width: 320px
+	min-width: 320px;
 }
 
 body:before {
 	content: '';
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 22em;
 	height: 100%;
-	background: #fff
+	background: #fff;
+	background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+	opacity: .6; 
 }
 
 @media screen and (max-width: 1680px) {
@@ -2735,7 +2739,7 @@ ul.pagination .page a:hover {
 }
 
 #sidebarPanel {
-	display: none
+	display: none;
 }
 
 @media screen and (max-width: 960px) {
