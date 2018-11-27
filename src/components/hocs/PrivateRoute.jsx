@@ -1,6 +1,6 @@
 import React from 'react';
 
-PrivateRoute = ({component: ChildComponent, layout: Layout, path, ...rest}) => {
+const PrivateRoute = ({component: ChildComponent, layout: Layout, path, ...rest}) => {
     return <Route {...rest} render={props => {
         if (this.props.auth.isLoading) {
         return <em>Loading...</em>;

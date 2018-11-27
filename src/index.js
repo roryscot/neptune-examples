@@ -1,13 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import todoApp from './reducers'
+
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const store = createStore(todoApp)
+
 const ReactRoot = document.getElementById('reactRoot');
 
 if (ReactRoot) {
-    ReactDOM.render(<App />, ReactRoot);
+    render(
+        <Provider store={store}>
+            <App />
+        </Provider>
+        ,
+        ReactRoot
+    );
 }
 
 // If you want your app to work offline and load faster, you can change

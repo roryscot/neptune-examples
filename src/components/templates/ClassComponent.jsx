@@ -12,9 +12,10 @@ class ClassComponent extends Component {
 
     render() {
       let {PrivateRoute} = this;
+      let content = 'test'
       return (
           <div>
-
+            { content }
           </div>
       );
     }
