@@ -8,4 +8,8 @@ export default {
         errors: {},
     },
     ajaxCallsInProgress: 0,
+    todos: {
+        visibilityFilter: VisibilityFilters.SHOW_ALL,
+        todos: []
+    }
   };

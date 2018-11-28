@@ -5,10 +5,7 @@ import {
     VisibilityFilters
   } from './actions'
   
-  const initialState = {
-    visibilityFilter: VisibilityFilters.SHOW_ALL,
-    todos: []
-  }
+import initialState from '../initialState';
     
   function todoApp(state = initialState, action) {
     switch (action.type) {

@@ -9,8 +9,8 @@ import PropTypes from 'prop-types'
 // import './styles/index.css';
 // import './styles/css/theme1.css';
 
-import { AddTodo, VisibleTodoList } from './components/lib/todos'
-import Footer from './components/lib/layout/footer/Footer';
+// import { AddTodo, VisibleTodoList } from './components/lib/todos'
+// import Footer from './components/lib/layout/footer/Footer';
 
 
 class App extends Component {
@@ -23,9 +23,6 @@ class App extends Component {
       <div className="application-container">
         <div>
         
-        <AddTodo />
-        <VisibleTodoList />
-        <Footer />
         </div>
       </div>
     );
