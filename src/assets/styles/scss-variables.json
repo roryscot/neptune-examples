@@ -1,7 +1,7 @@
 [
     {
-      "name": "Brand Colors",
-      "slug": "brand-color",
+      "name": "Neptune Colors",
+      "slug": "neptune-color",
       "data": [
         { "key": "$blue", "value": "#007bff", "default": "#007bff", "type": "color" },
         { "key": "$indigo", "value": "#6610f2", "default": "#6610f2", "type": "color" },
