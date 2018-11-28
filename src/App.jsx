@@ -13,6 +13,9 @@ import PropTypes from 'prop-types'
 // import Footer from './components/lib/layout/footer/Footer';
 
 
+import { BitcoinMonitor } from './components/lib/bitcoinMonitor/BitcoinMonitor';
+
+
 class App extends Component {
   static proptypes = {
     test: PropTypes.string  
@@ -22,7 +25,7 @@ class App extends Component {
     return (
       <div className="application-container">
         <div>
-        
+          <BitcoinMonitor />
         </div>
       </div>
     );

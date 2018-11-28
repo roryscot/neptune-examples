@@ -2,13 +2,13 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import todoApp from './redux/reducers'
+import rootReducer from './redux/reducers/rootReducer'
 
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const store = createStore(todoApp)
+const store = createStore(rootReducer)
 
 const ReactRoot = document.getElementById('reactRoot');
 

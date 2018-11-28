@@ -1,3 +1,5 @@
+import { VisibilityFilters } from './actions'
+
 export default {
     auth: {
         token: localStorage.getItem("token"),
