@@ -12,3 +12,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+/* transitions in react router */
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}
+
+.btn-refresh {
+  border-radius: 50%;
+  color: white;
+  background-color: #f7be68;
+  height: 4rem;
+  width: 4rem;
+}
+
+.currency {
+  cursor: pointer;
+  text-align: center;    
+  width: 90px;    
+}
+
+.table-body > tr > td {
+  font-size: 0.8rem;
+  text-align: center;
+}

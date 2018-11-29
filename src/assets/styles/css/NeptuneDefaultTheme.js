@@ -1,4 +1,4 @@
-import lightenDarkenColor from 'utils/helperFunctions';
+import { lightenDarkenColor } from 'utils/helperFunctions';
 
 // CSS strings
 const rem = 'rem';
@@ -184,7 +184,7 @@ const fonts = {
     nested_kbd_font_weight: font_weight_bold,
     list_inline_padding: '5px',
     mark_bg: '#fcf8e3',
-},
+};
 
 
 // Buttons
@@ -214,7 +214,7 @@ const buttons = {
 // Forms
 
 const input_bg = colors.tertiary;
-const input_box_shadow = `inset 0 1px 1px rgba(${black}, 0.075)`;
+const input_box_shadow = `inset 0 1px 1px rgba(${colors.black}, 0.075)`;
 const input_color = colors.gray_700;
 const input_border_color = `rgba(${colors.black}, 0.15)`;
 
@@ -230,10 +230,10 @@ const forms = {
     input_border_radius_sm: components.border_radius_sm,
     input_focus_bg: input_bg,
     input_focus_border_color: lightenDarkenColor(colors.primary, 25),
-    input_focus_box_shadow: [input_box_shadow, button.btn_focus_box_shadow],
+    input_focus_box_shadow: [input_box_shadow, buttons.btn_focus_box_shadow],
     input_focus_color: input_color,
     input_placeholder_color: colors.gray_600,
-    input_height_border: button.input_btn_border_width * 2,
+    input_height_border: buttons.input_btn_border_width * 2,
     // input_height_inner: (font.font_size_base * $input_btn_line_height) + ($input_btn_padding_y * 2),
     // input_height: calc(#{$input_height_inner} + #{$input_height_border}),
     // input_height_inner_sm: ($font_size_sm * $input_btn_line_height_sm) + ($input_btn_padding_y_sm * 2),
@@ -248,8 +248,8 @@ const forms = {
     form_check_input_margin_x: `0.25rem`,
     form_check_inline_margin_x: `0.75rem`,
     form_group_margin_bottom: `1rem`,
-    input_group_addon_bg: $gray_200,
-    input_group_addon_border_color: $input_border_color,
+    input_group_addon_bg: colors.gray_200,
+    input_group_addon_border_color: input_border_color,
     custom_control_gutter: `1.5rem`,
     custom_control_spacer_y: `0.25rem`,
     custom_control_spacer_x: `1rem`,
@@ -316,13 +316,13 @@ const dropdown = {
     dropdown_spacer: "0.125rem",
     dropdown_bg: `${colors.white}`,
     dropdown_border_color: `rgba(${colors.black}, 0.15)`,
-    dropdown_border_width: border_width,
-    dropdown_divider_bg: "$gray_200",
+    dropdown_border_width: components.border_width,
+    dropdown_divider_bg: colors.gray_200,
     dropdown_box_shadow: `0 0.5rem 1rem rgba(${colors.black}, 0.175)`,
     dropdown_link_color: colors.$gray_900,
     dropdown_link_hover_color: lightenDarkenColor(colors.gray_900, -55),
     dropdown_link_hover_bg: colors.gray_100,
-    dropdown_link_active_color: component.component_active_color,
+    dropdown_link_active_color: components.component_active_color,
     dropdown_link_active_bg: "$component_active_bg",
     dropdown_link_disabled_color: "$gray_600", 
     dropdown_item_padding_y: "0.25rem",
@@ -347,7 +347,7 @@ const navs = {
 
 };
 
-export default DefaulTheme = {
+export const DefaultTheme = {
     lightenDarkenColor: lightenDarkenColor,
     colors: colors,
     spacing: spacing, 

@@ -13,7 +13,7 @@ import PropTypes from 'prop-types'
 // import Footer from './components/lib/layout/footer/Footer';
 
 
-import { BitcoinMonitor } from './components/lib/bitcoinMonitor/BitcoinMonitor';
+import AnimatedTransitions from './components/AnimatedTransitions'
 
 
 class App extends Component {
@@ -24,9 +24,9 @@ class App extends Component {
   render() {
     return (
       <div className="application-container">
-        <div>
-          <BitcoinMonitor />
-        </div>
+
+        <AnimatedTransitions />
+        
       </div>
     );
   }
