@@ -1,4 +1,4 @@
-import { BEGIN_AJAX_CALL, AJAX_CALL_ERROR } from '../actionTypes';
+import { BEGIN_AJAX_CALL, AJAX_CALL_ERROR } from '../constants/actionTypes';
 import initialState from '../initialState';
 
 function actionTypeEndsInSuccess(type) {

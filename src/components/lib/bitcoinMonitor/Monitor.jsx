@@ -8,7 +8,8 @@ export const Monitor = () => {
     
         return (
             <div classnanme="center">
+                <h3>Bitcoin Monitor</h3>
               <BitcoinMonitor />
-          </div>
+            </div>
       )
 }

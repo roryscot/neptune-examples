@@ -11,4 +11,12 @@ export const AUTHENTICATION_ERROR = 'AUTHENTICATION_ERROR';
 export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
 export const LOGOUT_FAIL = 'LOGOUT_FAIL';
 
-export const TODO_LIST_LOAD_SUCCESS = ''
+//Products
+export const FETCH_PRODUCTS = 'FETCH_PRODUCTS';
+export const COMPARE_PRODUCT = 'COMPARE_PRODUCT';
+
+// todos
+
+export const ADD_TODO = 'ADD_TODO'
+export const TOGGLE_TODO = 'TOGGLE_TODO'
+export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'

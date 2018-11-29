@@ -44,7 +44,9 @@ code {
   text-align: center;
 }
 
+
 .center {
   text-align: center;
-  display: inline-block
+  display: inline-block;
+  width: 80%;
 }

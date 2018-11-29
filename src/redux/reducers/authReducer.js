@@ -7,7 +7,7 @@ import {
     REGISTRATION_FAIL,
     LOGOUT_SUCCESS,
     AUTHENTICATION_ERROR,
-  } from '../actionTypes';
+  } from '../constants/actionTypes';
   
   import initialState from '../initialState';
   
