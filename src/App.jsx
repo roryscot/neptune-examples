@@ -6,11 +6,13 @@ import PropTypes from 'prop-types'
 // import logo from './logo.svg';
 // import './App.css';
 
-// import './styles/index.css';
+import './index.css';
 // import './styles/css/theme1.css';
 
 // import { AddTodo, VisibleTodoList } from './components/lib/todos'
 // import Footer from './components/lib/layout/footer/Footer';
+
+// import './assets/fontawesome-free-5.5.0-web/css/all.min.css'
 
 
 import AnimatedTransitions from './components/AnimatedTransitions'

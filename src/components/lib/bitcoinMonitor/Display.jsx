@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Indicator } from './Indicator';
 
+import dollarSign from '../../../assets/fontawesome-free-5.5.0-web/svgs/solid/dollar-sign.svg'
+
 const formatNumber = (number) => number.toFixed(4).toString().padEnd(11, '0');
 
 const Display = (props) => (
@@ -59,11 +61,14 @@ const Display = (props) => (
                 </tr>
                 <tr>
                     <td>
-                        <select
+                        <select 
                             name="currency"
                             id="currency"
-                            className="currency form-control mx-auto"
+                            // defaultValue="Choose A Country"
+                            
+                            
                             onChange={props.onCurrencyChanged}>
+                            <option selected disabled>Choose A Country</option>
                             {
                                 props.currencies && props.currencies.map(currency => (
                                     <option key={currency.currency} value={currency.currency}>

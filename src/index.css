@@ -43,3 +43,8 @@ code {
   font-size: 0.8rem;
   text-align: center;
 }
+
+.center {
+  text-align: center;
+  display: inline-block
+}

@@ -25,11 +25,11 @@ import { AnimatedRGB } from '../components/hocs/AnimatedTransitions/AnimatedRGB'
 import {hexToRgb} from '../utils/helperFunctions'
 
 
-import { BitcoinMonitor } from '../components/lib/bitcoinMonitor/BitcoinMonitor';
+import { Monitor } from '../components/lib/bitcoinMonitor/Monitor';
 
 const title = ()=><div>Product Comparison</div>
 const gamification = ()=><div>Gameify participation in your business</div>
-const collaborativeRecords = ()=><div>Want your teams to be able to keep track of and collaborate on forms?</div>
+const collaborativeRecords = ()=><div>Manage and collaborate on forms</div>
 
 
 const styles = {};
@@ -39,7 +39,7 @@ styles.fill = {
   left: 0,
   right: 0,
   top: 0,
-  bottom: 0
+  bottom: 0,
 };
 
 styles.content = {
@@ -114,9 +114,9 @@ const AnimatedTransitions = () => {
                 >
                   <Switch location={location}>
                     <Route exact path="/productComparison"  component={AnimatedRGB(title, {...styles, bgColor: hexToRgb(theme.colors.tertiary)})}></Route>
-                    <Route exact path="/bitCoinMonitor"  component={AnimatedRGB(BitcoinMonitor, {...styles, bgColor: hexToRgb(theme.colors.primary)})}></Route>
+                    <Route exact path="/bitCoinMonitor"  component={AnimatedRGB(Monitor, {...styles, bgColor: hexToRgb(theme.colors.primary)})}></Route>
                     <Route exact path="/gamify"  component={AnimatedRGB(gamification, {...styles, bgColor: hexToRgb(theme.colors.secondary)})}></Route>
-                    <Route exact path="/records"  component={AnimatedRGB(collaborativeRecords, {...styles, bgColor: hexToRgb(theme.colors.violet)})}></Route>
+                    <Route exact path="/records"  component={AnimatedRGB(collaborativeRecords, {...styles, bgColor: hexToRgb(theme.colors.red)})}></Route>
 
                     <Route render={() => <div>Not Found</div>} />
                   </Switch>
