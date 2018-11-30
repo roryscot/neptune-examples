@@ -35,7 +35,9 @@ const Compare = ({products}) =>
           <tr className="condition">
             <th scope="row">Condition</th>
             {products.map(product =>
-              <td key={product.id} className={product.state === "Distant Future" ? "bg-red" : "bg-green"}>
+              <td key={product.id} className={product.state === "Distant Future" ? "bg-red" : 
+              product.state === "Future" ? "bg-blue" : 
+              "bg-green"}>
                 {product.state}
               </td>
             )}

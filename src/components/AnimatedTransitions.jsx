@@ -113,7 +113,7 @@ const AnimatedTransitions = () => {
                   timeout={300}
                 >
                   <Switch location={location}>
-                    <Route exact path="/productComparison"  component={AnimatedRGB(CompareProducts, {...styles, bgColor: hexToRgb(theme.colors.blue)})}></Route>
+                    <Route exact path="/productComparison"  component={AnimatedRGB(CompareProducts, {...styles, bgColor: hexToRgb(theme.colors.teal)})}></Route>
                     <Route exact path="/bitCoinMonitor"  component={AnimatedRGB(Monitor, {...styles, bgColor: hexToRgb(theme.colors.primary)})}></Route>
                     <Route exact path="/gamify"  component={AnimatedRGB(gamification, {...styles, bgColor: hexToRgb(theme.colors.secondary)})}></Route>
                     <Route exact path="/records"  component={AnimatedRGB(collaborativeRecords, {...styles, bgColor: hexToRgb(theme.colors.red)})}></Route>

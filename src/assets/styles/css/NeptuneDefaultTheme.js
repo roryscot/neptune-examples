@@ -33,6 +33,7 @@ const colors = {
     yellow: '#f7be68',
     green: '#6dab3c',
     turquoise: '#00c1cf',
+    teal: "#00839b",
     blue: '#4cadc9',
     indigo: '#5472d2',
     violet: '#8d6dc4',
