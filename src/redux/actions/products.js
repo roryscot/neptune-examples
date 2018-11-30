@@ -1,4 +1,4 @@
-import { products } from '../constants/actionTypes'
+import { FETCH_PRODUCTS, COMPARE_PRODUCT } from '../constants/actionTypes'
 
 export const getProducts = () =>
   dispatch =>
@@ -6,12 +6,12 @@ export const getProducts = () =>
       .then(response => response.json())
       .then(response => {
         dispatch({
-          type: types.FETCH_PRODUCTS,
+          type: FETCH_PRODUCTS,
           payload: response.products
         })
       })
 
 export const compare = product => ({
-    type: types.COMPARE_PRODUCT,
+    type: COMPARE_PRODUCT,
     product
   })

@@ -3,11 +3,9 @@ import {
     COMPARE_PRODUCT
 } from '../constants/actionTypes'
 
-const INITIAL_STATE = {
-  products: []
-};
+import initialState from '../initialState'
 
-export default function (state = INITIAL_STATE, action) {
+export default function (state = initialState, action) {
   switch (action.type) {
     case FETCH_PRODUCTS:
       return {

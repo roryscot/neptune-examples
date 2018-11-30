@@ -1,4 +1,4 @@
-import { todos } from '../constants/actionTypes'
+import * as todos from '../constants/actionTypes'
 
 const {
   ADD_TODO,

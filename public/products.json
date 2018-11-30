@@ -1,39 +1,41 @@
 {
-    "products": [{
+    "products": [
+      
+      {
         "id": "1",
-        "name": "Cherry",
-        "image": "images/Cherry.png",
-        "price": "$1.99",
-        "colors": ["red", "green", "blue"],
-        "condition": "Fresh",
-        "description": "Two Cherries"
+        "name": "Implant",
+        "image": "images/brain.png",
+        "price": "$1,490,000",
+        "appeal": ["blue"],
+        "state": "Distant Future",
+        "description": "Super computer powered by nanotech"
       },
       {
         "id": "2",
-        "name": "Orange",
-        "image": "images/Orange.png",
-        "price": "$2.99",
-        "colors": ["green", "blue"],
-        "condition": "Frozen",
-        "description": "Giant Orange"
+        "name": "Virtual Data",
+        "image": "images/vr.png",
+        "price": "$1,000,000",
+        "appeal": ["red"],
+        "state": "Future",
+        "description": "VR rendering of intelligent solutions"
       },
       {
         "id": "3",
-        "name": "Nuts",
-        "image": "images/Nuts.png",
-        "price": "$1.00",
-        "colors": ["red"],
-        "condition": "Frozen",
-        "description": "Mixed Nuts"
+        "name": "Intelligent Design",
+        "image": "images/IntelligentDesign.png",
+        "price": "$10,000.00",
+        "appeal": ["red", "green", "blue"],
+        "state": "Now!",
+        "description": "The future of app development"
       },
       {
         "id": "4",
-        "name": "Strawberry",
-        "image": "images/Strawberry.png",
-        "price": "$1.49",
-        "colors": ["blue"],
-        "condition": "Fresh",
-        "description": "Just Strawberry"
+        "name": "Biomedicine",
+        "image": "images/gene.png",
+        "price": "$14,000",
+        "appeal": ["green", "blue"],
+        "state": "Future",
+        "description": "Gene splicing and feature enhancing"
       }
     ]
   }

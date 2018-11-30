@@ -17,5 +17,6 @@ export default {
     todos: {
         visibilityFilter: VisibilityFilters.SHOW_ALL,
         todos: []
-    }
+    },
+    products: []
   };
