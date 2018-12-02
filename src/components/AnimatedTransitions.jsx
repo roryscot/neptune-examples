@@ -27,7 +27,6 @@ import {hexToRgb} from '../utils/helperFunctions'
 import CompareProducts from '../components/lib/productComparison/CompareProducts'
 import { Monitor } from '../components/lib/bitcoinMonitor/Monitor';
 
-const title = ()=><div>Product Comparison</div>
 const gamification = ()=><div>Gameify participation in your business</div>
 const collaborativeRecords = ()=><div>Manage and collaborate on forms</div>
 

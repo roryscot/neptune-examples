@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { Display } from './Display';
+import {bindActionCreators} from 'redux'
+import {connect} from 'react-redux'
+
 import { BitcoinService}  from './services/BitcoinService';
 import { CurrencyService } from './services/CurrencyService';
+import {monitors as monitorActions} from '../../../redux/actions/'
+// import { connect } from 'net';
+
 
 const bitcoinService = new BitcoinService();
 const currencyService = new CurrencyService();
@@ -16,26 +22,25 @@ const mapToPrice = (currentPrice, previousPrice) => {
 };
 
 class BitcoinMonitor extends Component {
+    // constructor(props){
+    //     super(props);
 
-    constructor(props){
-        super(props);
+    //     // this.props = {
+    //     //     prices: {}, 
+    //     //     ready: false,
+    //     //     currencies: []
+    //     // };
 
-        this.state = {
-            prices: {},
-            ready: false,
-            currencies: []
-        };
-
-        this.handleOnRefresh = this.handleOnRefresh.bind(this);
-        this.loadBitcoinPriceIndex = this.loadBitcoinPriceIndex.bind(this);
-        this.handleOnCurrencyChanged = this.handleOnCurrencyChanged.bind(this);
-    }
+    //     // this.handleOnRefresh = this.handleOnRefresh.bind(this);
+    //     // this.loadBitcoinPriceIndex = this.loadBitcoinPriceIndex.bind(this);
+    //     // this.handleOnCurrencyChanged = this.handleOnCurrencyChanged.bind(this);
+    // }
 
     
-    handleOnRefresh() {
-        if (this.state.prices.SELECTED) {            
+    handleOnRefresh = () => {
+        if (this.props.prices.SELECTED) {            
             
-            const currency = this.state.prices.SELECTED.code;
+            const currency = this.props.prices.SELECTED.code;
             
             bitcoinService
                 .getPrice(currency)
@@ -54,7 +59,7 @@ class BitcoinMonitor extends Component {
     }
 
     
-    handleOnCurrencyChanged(event) {
+    handleOnCurrencyChanged = (event) => {
         
         const currency = event.target.value;
         
@@ -73,30 +78,30 @@ class BitcoinMonitor extends Component {
     }
 
     
-    loadBitcoinPriceIndex(additionalPrice) {
-        bitcoinService
-            .getPrices()
-            .then(prices => {
-                if (prices) {                    
-                    this.setState(prevState => {
-                        const newPrices = {
-                            EUR: mapToPrice(prices.EUR, prevState.prices.EUR),
-                            GBP: mapToPrice(prices.GBP, prevState.prices.GBP),
-                            USD: mapToPrice(prices.USD, prevState.prices.USD)
-                        };
+    // loadBitcoinPriceIndex = (additionalPrice) => {
+    //     bitcoinService
+    //         .getPrices()
+    //         .then(prices => {
+    //             if (prices) {                    
+    //                 this.setState(prevState => {
+    //                     const newPrices = {
+    //                         EUR: mapToPrice(prices.EUR, prevState.prices.EUR),
+    //                         GBP: mapToPrice(prices.GBP, prevState.prices.GBP),
+    //                         USD: mapToPrice(prices.USD, prevState.prices.USD)
+    //                     };
 
-                        if (additionalPrice) {
-                            newPrices.SELECTED = mapToPrice(
-                                Object.values(additionalPrice)[0],
-                                prevState.prices.SELECTED);
-                        }
+    //                     if (additionalPrice) {
+    //                         newPrices.SELECTED = mapToPrice(
+    //                             Object.values(additionalPrice)[0],
+    //                             prevState.prices.SELECTED);
+    //                     }
 
-                        return { prices: newPrices, ready: true };
-                    });
-                }
-            })
-            .catch(error => console.log(error.message));
-    }
+    //                     return { prices: newPrices, ready: true };
+    //                 });
+    //             }
+    //         })
+    //         .catch(error => console.log(error.message));
+    // }
 
     
     loadSupportedCurrencies() {
@@ -106,17 +111,17 @@ class BitcoinMonitor extends Component {
     
     componentDidMount(){
         this.loadSupportedCurrencies();
-        this.loadBitcoinPriceIndex();
+        // this.loadBitcoinPriceIndex();
     }
 
 
     render() {
         return (
-            this.state.ready === true && <div>
+            this.props.ready === true && <div>
                 
                 <Display 
-                    currencies={this.state.currencies}
-                    prices={this.state.prices}
+                    currencies={this.props.currencies}
+                    prices={this.props.prices}
                     onCurrencyChanged={this.handleOnCurrencyChanged} />
 
                 <div className=" mt-5 text-center">
@@ -130,4 +135,23 @@ class BitcoinMonitor extends Component {
     }
 }
 
-export { BitcoinMonitor };
+const mapStateToProps = state => {
+    return {
+        prices: state.prices,
+        ready: state.ready,
+        currencies: state.currencies,  
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return({
+        actions: bindActionCreators(monitorActions, dispatch)
+    })
+}
+
+
+// export { BitcoinMonitor };
+export default connect(
+    mapStateToProps, 
+    mapDispatchToProps
+    )(BitcoinMonitor)

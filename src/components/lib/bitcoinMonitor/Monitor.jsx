@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { BitcoinMonitor } from './BitcoinMonitor';
+import BitcoinMonitor from './BitcoinMonitor';
 
 
 export const Monitor = () => {

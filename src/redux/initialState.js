@@ -18,5 +18,10 @@ export default {
         visibilityFilter: VisibilityFilters.SHOW_ALL,
         todos: []
     },
+    monitor: {
+        prices: {},
+        ready: false,
+        currencies: []
+    },
     products: []
   };

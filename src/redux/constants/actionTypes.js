@@ -16,7 +16,9 @@ export const FETCH_PRODUCTS = 'FETCH_PRODUCTS';
 export const COMPARE_PRODUCT = 'COMPARE_PRODUCT';
 
 // todos
-
 export const ADD_TODO = 'ADD_TODO'
 export const TOGGLE_TODO = 'TOGGLE_TODO'
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
+
+// monitor
+export const ADD_CURRENCY = 'ADD_CURRENCY'
